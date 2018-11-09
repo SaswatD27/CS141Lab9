@@ -47,13 +47,24 @@ int strchr1(char A[], char b)
 char *strstr1(char A[],char B[])
 {
 	char *str;
-	for(int i=0;A[i]!=NULL;i++)
+	int n,i,j;
+	for(i=0;A[i]!=NULL;i++)
 	{
 		while(B[i]!=A[i])
 		{
 			i++;
 			continue;
 		}
-		for(;B[j]!=NULL&&A[
-		
+		for(j=0, n=0;B[j]!=NULL&&A[i+j]!=NULL&&B[j]==A[i+j];j++)
+		{
+			n++;
+		}
+		if(n==strlen(B))
+		break;
+		else continue;
+	}
+	if(n==strlen(B))
+	return &A[i];
+	else return NULL;
+}
 			
