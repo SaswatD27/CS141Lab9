@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 void *strcpy1(char A[],char B[])
 {
@@ -10,9 +11,9 @@ void *strcpy1(char A[],char B[])
 }
 char *strcat1(char A[], char B[])
 {
-	for(int i=0,j=strlen(B);i<n;i++)
+	for(int i=0,j=strlen(B);i+j<(strlen(A)+strlen(B));i++)
 	{
-		int B[j+i]=A[i];
+		B[j+i]=A[i];
 	}
 	return B;
 }
@@ -24,6 +25,7 @@ int strlen1(char A[])
 }
 int strcmp1(char A[],char B[])
 {
+	int i;
 	int sum=0;
 	for(i=0;A[i]!='\0'&&B[i]!='\0';i++)
 	{
@@ -34,7 +36,7 @@ int strcmp1(char A[],char B[])
 int strchr1(char A[], char b)
 {
 	int occ;	
-	for(int i=0;A[i]!=NULL;i++)
+	for(int i=0;A[i]!='\0';i++)
 	{
 		if(A[i]==b)
 		{
