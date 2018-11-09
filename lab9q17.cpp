@@ -24,4 +24,36 @@ int strlen1(char A[])
 }
 int strcmp1(char A[],char B[])
 {
-	
+	int sum=0;
+	for(i=0;A[i]!='\0'&&B[i]!='\0';i++)
+	{
+		sum+=A[i]-B[i];
+	}
+	return sum;
+}
+int strchr1(char A[], char b)
+{
+	int occ;	
+	for(int i=0;A[i]!=NULL;i++)
+	{
+		if(A[i]==b)
+		{
+			occ=i+1;
+			break;
+		}
+	}
+	return occ;
+}
+char *strstr1(char A[],char B[])
+{
+	char *str;
+	for(int i=0;A[i]!=NULL;i++)
+	{
+		while(B[i]!=A[i])
+		{
+			i++;
+			continue;
+		}
+		for(;B[j]!=NULL&&A[
+		
+			
