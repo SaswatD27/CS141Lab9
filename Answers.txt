@@ -1,0 +1,28 @@
+1.
+	*p3 = S
+	*p3 = T, p3 = 6940
+	*p1 = S, p1 = 6940
+
+2. 
+	D. *p=75;
+
+3.
+	p is a pointer that is meant to contain the address of a double variable but when we try to assign the value of the address of a char variable  c, there will be a compilation error as the data types don't match.
+
+4. 
+	blocks is equal to "ABC"
+	ptr is equal to 4434
+	temp is equal to 'A'
+	temp is equal to 'C'
+	temp is equal to 'B'
+	temp is equal to 'A'
+	ptr is equal to 4435
+	temp is equal to 'B'
+	temp is equal to 'C'
+	ptr is equal to 4434
+	temp is equal to 'B' (ptr is equal to 4435)
+	temp is equal to 'C'
+	temp is equal to 'C' (after post increment blocks[1] = 'D')
+	temp is equal to 'D'
+
+
