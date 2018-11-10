@@ -1,13 +1,14 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-void *strcpy1(char A[],char B[])
+char *strcpy1(char A[],char B[])
 {
 	int n=strlen(B);
 	for(int i=0;i<n;i++)
 	{
 		A[i]=B[i];
 	}
+	return A;
 }
 char *strcat1(char A[], char B[])
 {
@@ -69,4 +70,3 @@ char *strstr1(char A[],char B[])
 	return &A[i];
 	else return NULL;
 }
-			
