@@ -74,12 +74,14 @@ int main()
 	char A[10]="abcd\0",B[10]="abc\0";
 	strcpy1(A,B);
 	cout<<A;
+	A="abcde\0";
 	if(strcmp1(A,B)==0)
-	cout<<"A and B are equal.";
+	cout<<endl<<"A and B are equal.";
 	else
-	cout<<"Not equal";
-	cout<<strcat1(A,B);
-	cout<<"Length of A = "<<strlen1(A);
-	cout<<"b occurs in A at position "<<strchr(A,'b');
+	cout<<endl<<"Not equal";
+	cout<<endl<<strcat1(A,B);
+	cout<<endl<<"Length of A = "<<strlen1(A);
+	cout<<endl<<"b occurs in A at position "<<strchr(A,'b');
+	cout<<endl<<"B occurs in A at "<<strstr(A,B);
 	return 0;
 }
