@@ -71,7 +71,9 @@ char *strstr1(char A[],char B[])
 }
 int main()
 {
-	char A[10]="abcd\0",B[10]="abc\0";
+	char A[10],B[10];
+	strcpy(A,"abcde\0");
+	strcpy(B,"abc\0");
 	strcpy1(A,B);
 	cout<<A;
 	A="abcde\0";
