@@ -35,7 +35,7 @@ int strcmp1(char A[],char B[])
 }
 int strchr1(char A[], char b)
 {
-	int occ;	
+	int occ=NULL;	
 	for(int i=0;A[i]!='\0';i++)
 	{
 		if(A[i]==b)
@@ -68,4 +68,18 @@ char *strstr1(char A[],char B[])
 	if(n==strlen(B))
 	return &A[i];
 	else return NULL;
+}
+int main()
+{
+	char A[10]="abcd\0",B[10]="abc\0";
+	strcpy1(A,B);
+	cout<<A;
+	if(strcmp1(A,B)==0)
+	cout<<"A and B are equal.";
+	else
+	cout<<"Not equal";
+	cout<<strcat1(A,B);
+	cout<<"Length of A = "<<strlen1(A);
+	cout<<"b occurs in A at position "<<strchr(A,'b');
+	return 0;
 }
