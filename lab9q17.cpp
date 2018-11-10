@@ -76,7 +76,7 @@ int main()
 	strcpy(B,"abc\0");
 	strcpy1(A,B);
 	cout<<A;
-	A="abcde\0";
+	strcpy(A,"abcde\0");
 	if(strcmp1(A,B)==0)
 	cout<<endl<<"A and B are equal.";
 	else
