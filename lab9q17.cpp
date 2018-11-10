@@ -31,6 +31,8 @@ int strcmp1(char A[],char B[])
 	{
 		sum+=A[i]-B[i];
 	}
+	if(strlen(B)!=strlen(A))
+	sum+=1;
 	return sum;
 }
 int strchr1(char A[], char b)
