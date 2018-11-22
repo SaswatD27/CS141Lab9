@@ -1,5 +1,6 @@
 #include<iostream>
 #include<stdio.h>
+#include<cstring>
 using namespace std;
 int main(void)
 {
@@ -7,18 +8,22 @@ int main(void)
 	cout << "Input about 10 characters of string\n";
 	cin >> str;
 	// Pointer variable refers to address of the last element of the string
-	int n;
-	for(n=0;str[n]!='\0';n++);	
-	p=&str[n-1];
-	// Show string by shifting the pointer right with each iteration
-	for(int i=0;i<n;i++)
+	p=str;
+	p=p+strlen(str);
+	char *f=&str[0];
+	// Show string by shifting top character of string to left
+	char *q;
+	do
 	{
-		for(int j=n-i-1;j<n;j++)
-		{		
-			p=&str[j];
-			cout<<*p;
+		p--;
+		q=p;
+		while(*q!='\0')
+		{	
+			cout<<*q;
+			q++;
 		}
 		cout<<endl;
-	}
-	return (0);
+	}while(p!=f-1);
+	return 0;
 }
+
