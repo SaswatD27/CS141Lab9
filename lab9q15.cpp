@@ -9,14 +9,17 @@ int main(void)
 	// Pointer variable refers to address of string
 	p=str;
 	// Show string by shifting top character of string to right
-	for(int i=0;str[i]!='\0';i++)
+	char *q;
+	while(*p!='\0')
 	{
-		for(int j=i;str[j]!='\0';j++)
-		{	
-			p=&str[j];	
-			cout<<*p;
+		q=p;
+		while(*q!='\0')
+		{
+			cout<<*q;
+			q++;
 		}
 		cout<<endl;
+		p++;
 	}
 	return 0;
 }
